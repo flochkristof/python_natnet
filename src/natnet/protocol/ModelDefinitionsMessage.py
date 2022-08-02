@@ -72,7 +72,7 @@ class ModelRegistry(SerDesRegistry):
         try:
             impl = self._implementation_types[model_type]
         except KeyError:
-            warnings.warn('Unknown model description type {}'.format(model_type))
+            #warnings.warn('Unknown model description type {}'.format(model_type))
             # TODO: What's the right way to handle this?
             return None
         return impl.deserialize(data, version)
